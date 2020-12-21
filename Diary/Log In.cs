@@ -61,5 +61,20 @@ namespace Diary
             ss.Show();*/
 
         }
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox.Checked)
+            {
+                Password.UseSystemPasswordChar = true;
+
+              
+            }
+            else
+            {
+                Password.UseSystemPasswordChar = false;
+            }
+        }
     }
 }
