@@ -35,8 +35,8 @@ namespace Diary
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.txtPassord = new System.Windows.Forms.TextBox();
             this.checkBox = new System.Windows.Forms.CheckBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -93,15 +93,6 @@ namespace Diary
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // txtPassord
-            // 
-            this.txtPassord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
-            this.txtPassord.Location = new System.Drawing.Point(123, 88);
-            this.txtPassord.Name = "txtPassord";
-            this.txtPassord.PasswordChar = '*';
-            this.txtPassord.Size = new System.Drawing.Size(168, 22);
-            this.txtPassord.TabIndex = 2;
-            // 
             // checkBox
             // 
             this.checkBox.AutoSize = true;
@@ -114,6 +105,14 @@ namespace Diary
             this.checkBox.UseVisualStyleBackColor = false;
             this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(123, 88);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(168, 20);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
             // Log_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,8 +120,8 @@ namespace Diary
             this.BackColor = System.Drawing.Color.Salmon;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(511, 276);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.checkBox);
-            this.Controls.Add(this.txtPassord);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label1);
@@ -145,7 +144,7 @@ namespace Diary
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox txtPassord;
         private System.Windows.Forms.CheckBox checkBox;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

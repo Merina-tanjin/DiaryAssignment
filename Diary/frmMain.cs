@@ -69,19 +69,39 @@ namespace Diary
         private void button3_Click(object sender, EventArgs e)
         {
             SqlConnection c = new SqlConnection(ConfigurationManager.ConnectionStrings["diary"].ConnectionString);
-            c.Open();
-            string q = "Insert Into events(Name,title,Date,text,Pictures)" + "Values('" + name.Text + "','" + title.Text + "','" + date.Text + "','" + text.Text + "','" + picture.Text + "')";
+            //string q = "INSERT INTO events(name,title,date,text,picture)" + " VALUES ('" + name.Text + "','" + title.Text + "','" + "random data" + "','" + "test" + "','" + "test" + "')";
+
+            string q = "INSERT INTO events(name,title,date,text,picture)" + " VALUES ('" + name.Text + "','" + title.Text + "','" + date.Text + "','" + text.Text + "','" + picture.Text + "' )";
+
             SqlCommand cm = new SqlCommand(q, c);
 
-            cm.ExecuteNonQuery();
-            c.Close();
-            MessageBox.Show(" Added Successfully!");
+          //  MessageBox.Show("name ios " + c);
+
+
+            c.Open();
+
+
+            try
+            {
+                cm.ExecuteNonQuery();
+                c.Close();
+                MessageBox.Show(" Added Successfully!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(" Error !");
+
+                throw;
+            }
+
+           
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)

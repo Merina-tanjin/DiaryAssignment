@@ -67,14 +67,19 @@ namespace Diary
 
             if (checkBox.Checked)
             {
-                Password.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = false;
 
               
             }
             else
             {
-                Password.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar =true;
             }
+        }
+
+        private void txtPassord_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
